@@ -12,7 +12,7 @@ export default function SectionTitle({ title }) {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    paddingVertical: 15,
+    paddingBottom: 15,
     backgroundColor: 'white',
   },
   title: {

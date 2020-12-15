@@ -8,7 +8,7 @@
  */
 
 import React, { useEffect, useReducer, useCallback } from 'react'
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, StyleSheet, Text, View, StatusBar } from 'react-native'
 
 import { getList } from "./api/picsum.photos";
 import { actionCreators, initialState, reducer } from "./reducers/photos";
@@ -63,6 +63,7 @@ export default function App() {
   /** calling fetch photos any time onEndReached is called. */
   return (
     <View>
+      <StatusBar backgroundColor='white' barStyle="dark-content" />
       <SectionTitle title="Photo Gallery App" />
       <PhotoGrid numColumns={3} photos={photos} onEndReached={fetchPhotos} />
     </View>
